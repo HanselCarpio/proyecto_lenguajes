@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> proyecto 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/externo.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+
+    
+</head>
+
+
+<body id="paginaPrincipal" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <!--sera un contenedor de 12 columnas-->
+            <div class="container">
+                <div class="col-sm-2">
+                    <a href="index.html">
+                        <img src="" width="110" height="60">
+                    </a>
+                </div>
+                <div class="navbar-header">
+                    <!--modo de visualizacion vertical-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse text-center" id="myNavbar">
+                    <!--modo de visualizacion horizontal-->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#listaAlojamiento">Opciones de alojamiento</a></li>
+                        <li><a href="#creditos">créditos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="jumbotron text-center">
+        <h1> BUENA VISTA </h1>
+        <h3>Te ofrecemos lo mejor en comodidades para su disfrute mientras te alojas en uno de las habitaciones de nuestros colaboradores</h3>
+
+    </div>
+
+    <div id="contenido" class="container">
+        <div class="row">
+            <div id="listaAlojamiento" class="col-sm-3">
+                <div class="colm-sm-3">
+                    <h2>Opciones de alojamiento</h2>
+                    <input id="boton" type="button" value="Alojamiento Entero" onclick="cambiarMenuMc()">
+                    <input id="boton" type="button" value="Habitación privada" onclick="cambiarMenuKFC()">
+                    <input id="boton" type="button" value="Habitación de hotel" onclick="cambiarMenuPH()">
+                    <input id="boton" type="button" value="Habitación compartida" onclick="cambiarMenuTB()">
+                </div>
+                <div class="colm-sm-2">
+                    
+                </div>
+            </div>
+
+            <div class="col-sm-8 background-grey container-fluid">
+
+                <h2>Habitaciones</h2>
+                <div id="bienvenido" class="container-fluid">
+
+                    <div id="campo1" class="col-sm-4">
+
+                    </div>
+                    <div id="campo2" class="col-sm-4">
+
+                    </div>
+                    <div id="campo3" class="col-sm-4">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container fluid background-grey">
+            <div class="row">
+                <div class="col-sm-4">
+
+                </div>
+            </div>
+        </div>
+
+        <div id="creditos" class="container-fluid">
+            <h2>contactanos</h2>
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p onclick="funcionPrincipal()"> <i class="fas fa-chalkboard-teacher"></i> Hansel Carpio</p>
+                    <p onclick="funcionPrincipal()"> <i class="fas fa-chalkboard-teacher"></i> Edgar Pereira</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p> <span class="glyphicon glyphicon-envelope"></span> buena.vista@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
