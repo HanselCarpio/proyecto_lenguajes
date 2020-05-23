@@ -24,7 +24,7 @@ function cambiarMenuHH() {
     var aux1 = document.getElementById("campo1");
     var aux2 = document.getElementById("campo2");
 
-    aux1.innerHTML = '<div class="thumbnail text-center"><img src="img/hoteles/YuccaBeachfront/Yucca1.webp" alt="yucca" width="450" height="400"><p id="yuccaBeach"><strong>Yucca Beachfront Cabinas</strong></p></div><center><input id="botonAñadir" type="button" value="ver detalles" onclick="location.href=\'detalleView.html\'"></center><br><div class="thumbnail text-center"><img src="img/hoteles/DOWNTOWN_LITTLE/DOWNTOWNLITTLE1.webp" alt="jaco" width="450" height="400"><p id="DOWNTOWNLITTLE"><strong> DOWNTOWN LITTLE LOFT - JACO INN</strong></p></div><center><input id="botonAñadir" type="button" value="ver detalles" onclick="location.href=\'detalleView.html\'"></center><br>';
+    aux1.innerHTML = '<div class="thumbnail text-center"><img src="img/hoteles/YuccaBeachfront/Yucca1.webp" alt="yucca" width="450" height="400"><p id="yuccaBeach"><strong>Yucca Beachfront Cabinas</strong></p></div><center><input id="botonAñadir" type="button" value="ver detalles" onclick="location.href=\'detalleView.html\'", cambiarYucca();></center><br><div class="thumbnail text-center"><img src="img/hoteles/DOWNTOWN_LITTLE/DOWNTOWNLITTLE1.webp" alt="jaco" width="450" height="400"><p id="DOWNTOWNLITTLE"><strong> DOWNTOWN LITTLE LOFT - JACO INN</strong></p></div><center><input id="botonAñadir" type="button" value="ver detalles" onclick="location.href=\'detalleView.html\'"></center><br>';
     aux2.innerHTML = '<div class="thumbnail text-center"><img src="img/hoteles/FamilyApartment/FamilyApartment1.webp" alt="family" width="450" height="400"><p id="familyApart"><strong>Family apartment in San Jose</strong></p></div><center><input id="botonAñadir" type="button" value="ver detalles" onclick="location.href=\'detalleView.html\'"></center><br><div class="thumbnail text-center"><img src="img/hoteles/OceanFrontEscape/OceanFrontEscape1.webp" alt="Ocean" width="450" height="400"><p id="OceanFront"><strong>Ocean Front Escape - Classic Queen</strong></p></div><center><input id="botonAñadir" type="button" value="ver detalles" onclick="location.href=\'detalleView.html\'"></center><br>';
 }
 
@@ -42,3 +42,11 @@ function compra() {
     alert("SU COMPRA HA SIDO REALIZADA CON EXITO");
     window.location.href = "index.html";
 }
+
+function cambiarYucca(){
+    var imagen = document.getElementById("yucca");
+
+    imagen.innerHTML = '<!--<img class="mySlides" src="img/hoteles/YuccaBeachfront/Yucca1.webp" style="width:100%"><img class="mySlides" src="img/hoteles/YuccaBeachfront/Yucca2.webp" style="width:100%"><img class="mySlides" src="img/hoteles/YuccaBeachfront/Yucca3.webp" style="width:100%"><img class="mySlides" src="img/hoteles/YuccaBeachfront/Yucca4.webp" style="width:100%"><button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button><button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>';
+}
+
+cambiarYucca();
