@@ -3,6 +3,18 @@
 
 <head>
     <title> proyecto 1</title>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/compra.js"></script>
+
+    
+    <script src="js/popper.min.js"></script>    
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -17,10 +29,12 @@
     <script type="text/javascript" src="js/externo.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+    <link rel="stylesheet" href="css/estilo.css" type="text/css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
     <style>
         .mySlides {
             display: none;
@@ -53,6 +67,26 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="#creditos">contactanos</a></li>
+                        <li class="nav-item dropdown">
+                            <img src="img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="50px"
+                                width="50px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"></img>
+                            <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                <table id="lista-carrito" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+    
+                                <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -67,7 +101,7 @@
     </div>
 
     <div id="contenido" class="container">
-        <div class="row">
+        <div class="row" id="lista-productos">
             <div id="listaAlojamiento" class="col-sm-6">
                 <div class="colm-sm-6">
                     <div id="yucca" class="w3-content w3-display-container">
@@ -101,8 +135,8 @@
                             x[slideIndex - 1].style.display = "block";
                         }
                     </script>
-                    <br>
-                    <center><button id="boton2" onclick="location.href='pagoView.html'" data-id="9">Reservar</button></center>
+                    </br>
+                    <a href="" class="btn btn-primary btn-block agregar-carrito" id="agregar-carrito" data-id="9">reservar</a>
 
                 </div>
             </div>
@@ -138,7 +172,7 @@
                             <h3>Free cancellation for 48 hours</h3>
                             <span>After that, cancel up to 5 days before check-in and get a full refund, minus the service fee.</span>
                             </br>
-                            <h3>₡28,490</h3> <span></span>per night</span>
+                            <h3 class="precio">₡28,490</h3> <span></span>per night</span>
                         </div>
 
                     </div>
@@ -172,6 +206,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

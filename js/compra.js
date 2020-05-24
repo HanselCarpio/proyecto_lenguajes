@@ -1,4 +1,4 @@
-const compra = new Carrito();
+const compra = new Elementos();
 const listaCompras = document.querySelector('#lista-compra tbody');
 
 cargarEventos();

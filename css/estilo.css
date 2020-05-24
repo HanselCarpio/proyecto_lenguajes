@@ -137,3 +137,6 @@ text-decoration: none;
       border-color: #303030;
   }
   
+  #cargando {
+    display: none;
+}

@@ -1,4 +1,4 @@
-class Elementos{
+﻿class Elementos {
 
     comprarProducto(e) {
         e.preventDefault();
@@ -11,8 +11,9 @@ class Elementos{
     leerDatosProducto(producto) {
         const infoProducto = {
             titulo: producto.querySelector('h4').textContent,
-            precio: producto.querySelector('.precio span').textContent,
-            id: producto.querySelector('button').getAttribute('data-id')
+            precio: producto.querySelector('.precio h3').textContent,
+            id: producto.querySelector('a').getAttribute('data-id'),
+            cantidad: 1
         }
         let productosLS;
         productosLS = this.obtenerProductosLocalStorage();
@@ -32,6 +33,13 @@ class Elementos{
     }
 
     insertarCarrito(producto) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+        <td>${producto.titulo}</td>
+        <td>${producto.precio}</td>
+        <td><a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a></td>
+        `;
+        listaProductos.appendChild(row);
         this.guardarProductosLocalStroage(producto);
     }
 
@@ -92,7 +100,6 @@ class Elementos{
         productosLS.forEach(function (producto) {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td><img src = "${producto.imagen}" width =100></td>
                 <td>${producto.titulo}</td>
                 <td>${producto.precio}</td>
                 <td><a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a></td>
@@ -111,7 +118,7 @@ class Elementos{
             console.log('carrito vacio');
         }
         else{
-        location.href="compra.html";
+        location.href="pagoView.html";
         }
     }
 
@@ -121,7 +128,6 @@ class Elementos{
         productosLS.forEach(function (producto) {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td><img src = "${producto.imagen}" width =100></td>
                 <td>${producto.titulo}</td>
                 <td>${producto.precio}</td>
                 <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
@@ -143,9 +149,9 @@ class Elementos{
         igv = parseFloat(total * 0.18).toFixed(2);
         subtotal = parseFloat(total - igv).toFixed(2);
 
-        document.getElementById('subtotal').innerHTML = "S/. " + subtotal;
-        document.getElementById('igv').innerHTML = "S/. " + igv;
-        document.getElementById('total').innerHTML = "S/. " + total.toFixed(2);
+        //document.getElementById('subtotal').innerHTML = "S/. " + subtotal;
+        //document.getElementById('igv').innerHTML = "S/. " + igv;
+        //document.getElementById('total').innerHTML = "S/. " + total.toFixed(2);
     }
 
 }
