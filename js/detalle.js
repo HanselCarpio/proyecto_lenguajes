@@ -1,4 +1,26 @@
-const carro = new Carrito();
+const ele = new Elementos();
+const alojamiento = document.getElementById('campo1');
+
+const procesarDetallesBtn = document.getElementById('verDetalles');
+
+cargarEventos();
+
+function cargarEventos(){
+    console.log('1');
+alojamiento.addEventListener('click', (e)=>{ele.elegirAlojamiento(e)});
+}
+
+
+
+window.onload = function(){
+    cargarEventos();
+  }
+
+function cargarEventos(){
+    procesarDetallesBtn.addEventListener('click', (e)=>{ele.procesarPedido(e)});
+}
+
+/*const carro = new Elemento();
 const carrito = document.getElementById("carrito");
 const producto = document.getElementById("lista-productos");
 const listaProductos = document.querySelector("#lista-carrito tbody");
@@ -18,4 +40,4 @@ function cargarEventos(){
     document.addEventListener('DOMContentLoaded', carro.leerLocalStorage());
 
     procesarPedidoBtn.addEventListener('click', (e)=>{carro.procesarPedido(e)});
-}
+}*/

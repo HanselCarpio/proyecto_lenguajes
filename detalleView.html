@@ -3,6 +3,11 @@
 
 <head>
     <title> proyecto 1</title>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -70,15 +75,16 @@
         <div class="row">
             <div id="listaAlojamiento" class="col-sm-6">
                 <div class="colm-sm-6">
-                    <div id="yucca" class="w3-content w3-display-container">
+                    <div id="imagenes" class="w3-content w3-display-container">
                         
-                        <img class="mySlides" src="img/hoteles/YuccaBeachfront/Yucca1.webp" style="width:100%">
+                        <!--<img class="mySlides" src="img/hoteles/YuccaBeachfront/Yucca1.webp" style="width:100%">
                         <img class="mySlides" src="img/hoteles/YuccaBeachfront/Yucca2.webp" style="width:100%">
                         <img class="mySlides" src="img/hoteles/YuccaBeachfront/Yucca3.webp" style="width:100%">
                         <img class="mySlides" src="img/hoteles/YuccaBeachfront/Yucca4.webp" style="width:100%">
 
                         <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>-->
+                        
                     </div>
 
 
@@ -102,7 +108,8 @@
                         }
                     </script>
                     <br>
-                    <center><button id="boton2" onclick="location.href='pagoView.html'" data-id="9">Reservar</button></center>
+                    
+                    <!--<center><button id="boton2" onclick="location.href='pagoView.html'" data-id="9">Reservar</button></center>-->
 
                 </div>
             </div>
@@ -112,7 +119,7 @@
                 <div id="bienvenido" class="container-fluid">
 
                     <div id="campo1" class="col-sm-12">
-                        <div>
+                        <div class="container">
                             <h2>Yucca Beachfront Cabinas</h2>
                             <h7>Puerto Viejo de Talamanca, Limón, Costa Rica</h7>
                             <br>
@@ -126,21 +133,22 @@
                             <br>
 
                             <h3>Great location</h3>
-                            <span>100% of recent guests gave the location a 5-star rating.</span>
 
                             <br>
 
                             <h3>Great check-in experience</h3>
-                            <span>95% of recent guests gave the check-in process a 5-star rating.</span>
                             
                             <br>
 
                             <h3>Free cancellation for 48 hours</h3>
-                            <span>After that, cancel up to 5 days before check-in and get a full refund, minus the service fee.</span>
-                            </br>
-                            <h3>₡28,490</h3> <span></span>per night</span>
-                        </div>
 
+                            </br>
+
+                            <span class="yuca-precio">₡28,490</span><span>|</span><span>per night</span>
+
+                        </div>
+                    </br>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="9">ver detalles</a>
                     </div>
 
                 </div>
@@ -172,6 +180,11 @@
             </div>
         </div>
     </div>
+
+    <script src="js/elementos.js"></script>
+    <script src="js/detalle.js"></script>
+    <script src="js/pago.js"></script>   
+
 </body>
 
 </html>
